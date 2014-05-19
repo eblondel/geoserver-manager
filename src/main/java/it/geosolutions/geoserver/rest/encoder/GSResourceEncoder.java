@@ -261,6 +261,19 @@ public abstract class GSResourceEncoder
 	public void setProjectionPolicy(ProjectionPolicy policy) {
 		set(PROJECTIONPOLICY, policy.toString());
 	}
+	
+	/**
+	 * Get ProjectionPolicy
+	 * 
+	 * @return
+	 */
+	public String getProjectionPolicy() {
+		final Element nameNode = ElementUtils.contains(getRoot(), PROJECTIONPOLICY, 1);
+		if (nameNode != null)
+			return nameNode.getText();
+		else
+			return null;
+	}
 
 	/**
 	 * Add the 'name' node with a text value from 'name'
@@ -356,6 +369,19 @@ public abstract class GSResourceEncoder
     public void setAbstract(final String _abstract) {
         set(ABSTRACT, _abstract);
     }
+    
+    /**
+	 * Get Abstract
+	 * 
+	 * @return
+	 */
+	public String getAbstract() {
+		final Element nameNode = ElementUtils.contains(getRoot(), ABSTRACT, 1);
+		if (nameNode != null)
+			return nameNode.getText();
+		else
+			return null;
+	}
 
 	private final static String TITLE = "title";
 
@@ -372,6 +398,19 @@ public abstract class GSResourceEncoder
 	 */
 	public void setTitle(final String title) {
 		set(TITLE, title);
+	}
+	
+	/**
+	 * Get Title
+	 * 
+	 * @return
+	 */
+	public String getTitle() {
+		final Element nameNode = ElementUtils.contains(getRoot(), TITLE, 1);
+		if (nameNode != null)
+			return nameNode.getText();
+		else
+			return null;
 	}
 
 	private final static String SRS = "srs";
@@ -390,6 +429,19 @@ public abstract class GSResourceEncoder
 		set(SRS, srs);
 	}
 	
+	/**
+	 * Get SRS
+	 * 
+	 * @return
+	 */
+	public String getSRS() {
+		final Element nameNode = ElementUtils.contains(getRoot(), SRS, 1);
+		if (nameNode != null)
+			return nameNode.getText();
+		else
+			return null;
+	}
+	
 	private final static String NATIVECRS = "nativeCRS";
 
 	/**
@@ -404,6 +456,19 @@ public abstract class GSResourceEncoder
 	 */
 	public void setNativeCRS(final String nativeCRS) {
 		set(NATIVECRS, nativeCRS);
+	}
+	
+	/**
+	 * Get Native CRS
+	 * 
+	 * @return
+	 */
+	public String getNativeCRS() {
+		final Element nameNode = ElementUtils.contains(getRoot(), NATIVECRS, 1);
+		if (nameNode != null)
+			return nameNode.getText();
+		else
+			return null;
 	}
 
 	private final static String LATLONBBMINX = "latLonBoundingBox/minx";
